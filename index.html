@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Paid-media lead generation and qualification. Try Leadcentral’s property buyer preview and see the record your sales team receives.">
+  <title>Leadcentral | Lead generation and qualification</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+<header><div class="wrap bar"><a class="brand" href="#home" aria-label="Leadcentral home"><i aria-hidden="true"></i>Leadcentral</a>
+  <nav aria-label="Main"><a href="#process">How it works</a><a href="#demo">Property demo</a><a href="#agency">Agency</a></nav>
+  <a class="booking outline" href="#booking">Book an online meeting</a></div></header>
+<main id="home">
+<section class="hero wrap">
+  <div class="hero-copy"><p class="eyebrow"><span class="dash"></span> Lead generation &amp; qualification</p>
+  <h1>Know which leads to <em>call first</em></h1>
+  <p class="intro">We generate leads through paid media, validate the contact details and identify the buyers' preferences with AI calls. Your sales team gets a pre-qualified lead and a clear reason to pick up the phone.</p>
+  <div class="actions"><a class="primary" href="#demo"><span class="play" aria-hidden="true"></span>Try the property demo</a><a class="textlink booking" href="#booking">Book an online meeting</a></div></div>
+  <img class="hero-image" src="assets/marbella-lead.webp" width="2752" height="1536" alt="Illustrative high-priority CRM lead for a Marbella villa buyer with a €2.5 million budget and a three-month timeframe.">
+</section>
+<section id="process" class="section ruled"><div class="wrap"><p class="eyebrow"><span class="dash"></span> How it works</p><h2>From enquiry to sales handoff.</h2>
+  <div class="columns"><article><h3>Generate the enquiry</h3><p>We run paid campaigns to reach people interested in your offer.</p></article><article><h3>Check and qualify</h3><p>We check email and phone details. An AI caller asks what buyers want, where they’re looking, when they plan to buy, and how much they want to spend.</p></article><article><h3>Hand it over with a grade</h3><p>Your team receives the contact details, the buyer’s answers, and a priority grade to guide the next conversation.</p></article></div></div></section>
+<section id="demo" class="section demo"><div class="wrap demo-layout"><div><p class="eyebrow"><span class="dash"></span> Interactive preview</p><h2>Try the buyer experience on one of your own listings.</h2><p>Play the buyer, answer the qualification questions on screen, and see what your sales agent would receive.</p><p class="note">Your details stay in this browser tab. The preview sends no calls or messages and does not open your listing.</p></div>
+<div class="panel"><form id="contact"><h3 tabindex="-1">Your demo details</h3><button class="sample" type="button" id="sample">Use sample details</button>
+<label>Property listing URL<input required type="url" name="listing" placeholder="https://your-agency.com/property" maxlength="2000"></label>
+<label>Name<input required name="name" autocomplete="name" maxlength="120"></label>
+<label>Email<input required type="email" name="email" autocomplete="email" maxlength="254"></label>
+<label>Phone with country code<input required type="tel" name="phone" autocomplete="tel" placeholder="+34 600 000 000" maxlength="30"></label>
+<fieldset><legend>Preferred call channel</legend><label class="choice"><input type="radio" name="channel" value="WhatsApp" checked> WhatsApp</label><label class="choice"><input type="radio" name="channel" value="Regular mobile call"> Regular mobile call</label></fieldset>
+<label class="choice"><input type="checkbox" name="consent"> In a future live demo, I would agree to one qualification call on my chosen channel.</label><p class="hint">Optional for this preview. A live call would require fresh permission.</p>
+<button class="primary">Start preview</button></form>
+<form id="buyer" hidden><h3 tabindex="-1">Your buying criteria</h3><p>Answer as the buyer. You can leave any question open.</p>
+<label>What are you looking to buy?<input name="property" placeholder="A two-bedroom apartment" maxlength="300"></label>
+<label>Where would you like to buy?<input name="location" placeholder="Estepona, Spain" maxlength="300"></label>
+<label>When are you looking to buy?<select name="timing"><option value="">Select a timeframe</option><option>Within 3 months</option><option>In 3–6 months</option><option>In more than 6 months</option><option>Just exploring</option></select></label>
+<label>How much would you like to spend?<input name="budget" placeholder="Up to €450,000" maxlength="200"></label>
+<label>What are your must-haves?<textarea name="must" maxlength="1200" placeholder="Step-free access"></textarea></label>
+<label>Any nice-to-haves?<textarea name="nice" maxlength="1200" placeholder="A sea view"></textarea></label>
+<div class="actions"><button class="primary">View lead record</button><button type="button" class="sample" id="back">Edit details</button></div></form>
+<section id="result" hidden><p class="eyebrow">Sales handoff preview</p><h3 tabindex="-1">Your lead record</h3><strong id="grade" class="tag"></strong><p id="reason"></p><dl id="record"></dl>
+<h3>Which questions would your agents want answered before their first call?</h3><a class="primary booking" href="#booking">Book an online meeting</a><div class="actions"><button id="edit" class="sample">Edit answers</button><button id="reset" class="sample">Clear preview</button></div></section></div></div></section>
+<section class="section wrap agency" id="agency"><div><p class="eyebrow"><span class="dash"></span> Agency</p><h2>Qualification shaped by your market.</h2></div><div><p>We know Spanish real estate particularly well. A buyer’s preferred area, budget, property type, and timing give an agent a starting point for a viewing. Our lead generation experience also includes the trademark industry.</p><p>Management fees start at <strong>€1,000 per month.</strong> Advertising spend is separate.</p></div></section>
+</main><footer><div class="wrap bar"><a class="brand" href="#home"><i aria-hidden="true"></i>Leadcentral</a><a href="#home">Back to top</a></div></footer>
+<dialog id="booking"><h2>Book an online meeting</h2><p>Meeting scheduling will be available when the site launches.</p><form method="dialog"><button class="primary">Close</button></form></dialog>
+</body></html>

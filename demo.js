@@ -65,8 +65,17 @@ function render(data) {
   } else {
     market.append(node("p","Local market claims are withheld until a source-backed research provider is configured and a reliable location is identified."));
   }
+  market.append(node("p","Buyer considerations to research (not established market facts):","demo-label"));
+  bullets(market,[
+    "Comparable supply, asking prices versus completed sale prices, and negotiating conditions",
+    "Demand trends, seasonality and time on market",
+    "Transport, amenities, planned construction and local zoning",
+    "Regional purchase taxes, financing and non-resident or rental regulations"
+  ]);
   status.textContent = data.warnings.length ? "Some information was unavailable: " + data.warnings.join("; ") : "Property and agency preview prepared from publicly available pages.";
-  // Personalize locally; the research endpoint never receives the visitor’s identity.\n  const visitorName=$("demoName").value.trim().replace(/[\\r\\n]/g," ").slice(0,100);\n  lastBriefing=data.agentBriefing.replaceAll("{{buyer_name}}",visitorName);
+  // Personalize locally; the research endpoint never receives the visitor identity.
+  const visitorName=$("demoName").value.trim().replace(/[\r\n]/g," ").slice(0,100);
+  lastBriefing=data.agentBriefing.replaceAll("{{buyer_name}}",visitorName);
   $("briefingText").textContent=lastBriefing;
 }
 form.addEventListener("submit", async event => {

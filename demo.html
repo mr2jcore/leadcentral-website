@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Preview a property-specific AI buyer qualification call using one of your agency's listings.">
+<title>Live property demo | Leadcentral</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/demo.css">
+<script defer src="/demo.js"></script>
+</head>
+<body>
+<header><div class="wrap bar"><a class="brand" href="/"><i aria-hidden="true"></i>Leadcentral</a><nav aria-label="Main"><a href="/">Home</a><a href="/#process">How it works</a><a href="/#agency">Agency</a></nav><a class="outline" href="/">Back to website</a></div></header>
+<main class="demo-page">
+<section class="demo-heading wrap">
+<p class="eyebrow"><span class="dash"></span> FOR REAL ESTATE AGENCIES</p>
+<h1>Put your own listing to the test.</h1>
+<p class="demo-intro">Choose a property you know well. We'll prepare an AI buyer conversation using the listing, its photographs, your agency's website and sourced local context.</p>
+<p class="demo-stage"><strong>Preview mode:</strong> listing preparation is available for testing. WhatsApp calling will be enabled after our business number and voice integration are approved.</p>
+</section>
+<section class="wrap demo-two-col" aria-label="Prepare a property demo">
+<div class="panel demo-form-panel">
+<h2>Your property. Four details.</h2>
+<p>You're the agency owner or manager testing the experience as a prospective buyer.</p>
+<form id="demoForm">
+<label for="demoName">Your name<input id="demoName" name="name" autocomplete="name" required maxlength="120" placeholder="Alex"></label>
+<label for="demoEmail">Work email<input id="demoEmail" name="email" autocomplete="email" type="email" required maxlength="254" placeholder="alex@agency.com"></label>
+<label for="demoPhone">WhatsApp number<input id="demoPhone" name="phone" type="tel" autocomplete="tel" required maxlength="30" placeholder="+34 600 000 000"></label>
+<label for="demoListing">Your property listing URL<input id="demoListing" name="listing" type="url" inputmode="url" required maxlength="2000" placeholder="https://your-agency.com/property/..."></label>
+<button class="primary demo-submit" id="prepareBtn" type="submit">Prepare my buyer demo</button>
+<p class="demo-privacy">This preview sends only the listing URL to our server to retrieve public property information. Your name, email and phone remain in this browser tab until a separate, consent-based call or lead-submission process is enabled. We do not call you from this form.</p>
+</form>
+</div>
+<div class="demo-steps">
+<p class="eyebrow"> WHAT HAPPENS BEHIND THE SCENES</p>
+<ol>
+<li><strong>Understand your property</strong><span>Gather publicly available listing text, structured details and image references.</span></li>
+<li><strong>Understand your agency</strong><span>Review the site's home page and an identifiable About page when available.</span></li>
+<li><strong>Check the local context</strong><span>Find sources about local housing conditions and buyer considerations. Unverified claims aren't presented as facts.</span></li>
+<li><strong>Prepare Sarah, our AI caller</strong><span>Turn the findings into an opening-call briefing, referenced to the sources.</span></li>
+</ol>
+<div class="demo-note"><strong>Designed to be credible.</strong> An agent should recognize the property and have a relevant conversation, not recite generic sales questions.</div>
+</div>
+</section>
+<section id="demoOutput" class="wrap demo-output" hidden aria-live="polite">
+<div class="demo-output-heading"><div><p class="eyebrow"> RESEARCH PREVIEW</p><h2>What Sarah can know before the call</h2></div><button class="outline" id="copyBriefing" type="button">Copy agent briefing</button></div>
+<p id="demoStatus" role="status"></p>
+<div class="demo-results-grid"><article class="panel"><h3>The property</h3><div id="propertyInfo"></div><div id="propertyImages" class="demo-images"></div></article>
+<article class="panel"><h3>The agency</h3><div id="agencyInfo"></div></article></div>
+<article class="panel demo-market"><h3>Local market & buyer considerations</h3><div id="marketInfo"></div></article>
+<article class="panel demo-brief"><h3>Call briefing for Sarah</h3><p class="demo-muted">This is preparation context, not yet a WhatsApp call.</p><pre id="briefingText"></pre></article>
+</section>
+<footer><div class="wrap bar"><a class="brand" href="/"><i aria-hidden="true"></i>Leadcentral</a><a href="/">Back to homepage</a></div></footer>
+</main>
+</body></html>

@@ -66,7 +66,7 @@ function render(data) {
     market.append(node("p","Local market claims are withheld until a source-backed research provider is configured and a reliable location is identified."));
   }
   status.textContent = data.warnings.length ? "Some information was unavailable: " + data.warnings.join("; ") : "Property and agency preview prepared from publicly available pages.";
-  lastBriefing=data.agentBriefing;
+  // Personalize locally; the research endpoint never receives the visitor’s identity.\n  const visitorName=$("demoName").value.trim().replace(/[\\r\\n]/g," ").slice(0,100);\n  lastBriefing=data.agentBriefing.replaceAll("{{buyer_name}}",visitorName);
   $("briefingText").textContent=lastBriefing;
 }
 form.addEventListener("submit", async event => {
